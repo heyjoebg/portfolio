@@ -552,16 +552,37 @@ body {
   }
 
   .main-nav-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
-    background-color: #fff;
-    padding: 15px 0;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
   }
 
   .nav-toggle-input:checked ~ .main-nav .main-nav-menu {
-    display: flex;
+    max-height: 400px;
+    opacity: 1;
+    padding: 10px 0;
+  }
+
+  .main-nav-menu__link {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--purplehaze);
+    padding: 12px 15px;
+  }
+
+  .main-nav-menu__link:last-child {
+    border-bottom: none;
   }
 
   .menu-btn-wrapper {
