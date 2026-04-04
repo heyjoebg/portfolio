@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import MetadataGrid from '../components/case-study/MetadataGrid.astro';
+import CaseStudyCard from '../components/ui/CaseStudyCard.astro';
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description?: string;
+  year: string;
+  role: string;
+  team: string;
+  tags: string[];
+  heroImage: string;
+  heroImageAlt: string;
+  otherProjects: CollectionEntry<'projects'>[];
+}
+
+const { title, subtitle, description, year, role, team, tags, heroImage, heroImageAlt, otherProjects } =
+  Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container container-case-study">
+    <h1 class="huge-heading">{title}<br />{subtitle}</h1>
+
+    <div class="two-col">
+      <div class="col-one">
+        <img src={heroImage} alt={heroImageAlt} loading="eager" class="portfolio-img" style="width:100%;" />
+      </div>
+      <MetadataGrid year={year} role={role} team={team} tags={tags} />
+    </div>
+
+    <slot />
+  </div>
+
+  <div class="main-title main-title--other">
+    <h1 class="main-heading">other case studies</h1>
+  </div>
+  <div class="main-container">
+    <div class="case-studies-grid">
+      {otherProjects.map((p) => <CaseStudyCard title={p.data.title} subtitle={p.data.subtitle} slug={p.id} />)}
+    </div>
+  </div>
+</BaseLayout>

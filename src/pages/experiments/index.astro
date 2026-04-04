@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Highlight from '../../components/case-study/Highlight.astro';
+---
+
+<BaseLayout
+  title="AI Experiments"
+  description="This is where I build and ship small products; it's my playground for vibe-coding, prototyping in code, and exploring AI as part of the design process."
+>
+  <div class="container container-case-study">
+    <!-- Intro -->
+    <div class="single-col mb-50">
+      <h1 class="huge-heading mb-20"><strong>Experiments</strong></h1>
+      <p class="heyjoe_paragraph">
+        <strong>Experiments</strong> is where I build and ship small products outside of work—fast, messy, and real.
+        It's my playground for vibe-coding, prototyping in code, and exploring AI as part of the design process.
+        Not polished case studies, just honest snapshots of how I think, make decisions, and stay current.
+      </p>
+    </div>
+
+    <!-- Project: Debeo -->
+    <div class="single-col mb-50">
+      <h1 class="huge-heading"><strong>Debeo: Expense tracking, minus the spreadsheet pain</strong></h1>
+
+      <!-- Metadata -->
+      <div class="col-two col-two--tags">
+        <div class="list-item">
+          <div class="list-title no-margin">Year</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">2026</div>
+        </div>
+        <div class="list-item">
+          <div class="list-title no-margin">Role</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">Product Builder</div>
+        </div>
+        <div class="list-item list-item--tags">
+          <div class="list-title no-margin">Skills</div>
+          <div class="tags">
+            <div class="tag-container">
+              <div class="heyjoe_paragraph heyjoe_paragraph--tag">Product Strategy</div>
+              <div class="heyjoe_paragraph heyjoe_paragraph--tag">User Research</div>
+              <div class="heyjoe_paragraph heyjoe_paragraph--tag">Ideation</div>
+              <div class="heyjoe_paragraph heyjoe_paragraph--tag">AI Prototyping</div>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-title no-margin">Tools</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">ChatGPT, Lovable, Figma.</div>
+        </div>
+        <div class="list-item">
+          <div class="list-title no-margin">Link</div>
+          <a href="https://debeoapp.lovable.app/auth" target="_blank" rel="noopener noreferrer" class="link"
+            >Check out the demo here</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <Highlight text="Debeo's goal: replace our spreadsheet dependency when tracking expenses." />
+
+    <div class="single-col mb-50">
+      <h2 class="case-study-subtitle"><strong>Debeo, a private expense tracker</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        Debeo is a small, private expense tracker I'm building for my brother and me to replace a messy Excel
+        workflow. It's my playground for <strong>vibe-coding</strong>, rapid prototyping, and exploring what an
+        <strong>AI-enabled product designer</strong> can ship on nights/weekends—without waiting for a "perfect"
+        work case study.
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>Why I built it</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        We manage shared + personal expenses with an Excel sheet that "works"… until it doesn't:<br /><br />
+        - Too many manual steps (copy/paste, categories, splitting, balances).<br />
+        - The mobile experience is not good for a table based product and 80% of the time we log expenses on
+        mobile and not on desktop.<br />
+        - Easy to break formulas / lose consistency over time.<br />
+        - Hard to answer simple questions fast: <em>"How much did we spend on X last month?"</em>
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>Users</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>- Me + my brother</strong> (busy, not accounting-obsessed, want clarity without friction).<br />
+        - Future-friendly by design (so it could scale to more people later), but right now it's intentionally
+        <strong>built for our needs first</strong>.
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>What success looks like</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>
+          - We stop using the spreadsheet for day-to-day tracking.<br />
+          - Logging an expense takes &lt;10 seconds.<br />
+          - Monthly totals, category breakdowns, and "who owes who" are always correct.
+        </strong>
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>Constraints</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>
+          - Private product (not open-source, not public-facing).<br />
+          - Must work well on mobile first (where expenses happen).<br />
+          - Needs to support "real life" cases: split expenses, recurring bills, reimbursements, multi-currency
+          (USD/COP).
+        </strong>
+      </p>
+    </div>
+
+    <Highlight text='I&apos;m not doing "perfect Figma first."' />
+
+    <div class="single-col mb-50">
+      <h2 class="case-study-subtitle"><strong>My approach (how I'm building it)</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>
+          This is intentionally an <em>experiment</em> in modern product-making:<br />
+          - Vibe-coded prototyping: I iterate quickly from idea → working flow → refine<br />
+          - AI as a teammate: fast scaffolding, edge-case mapping, UI copy variants, validation rules, and data
+          modeling drafts<br />
+          - Design + build loop: I'm not doing "perfect Figma first." I'm using design thinking while shipping
+          the experience in code, tightening the UX as I go.<br />
+          - AI helps a ton, but only when I'm clear about the job-to-be-done and constraints.
+        </strong>
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>Core flows</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>
+          1. Quick add expense (amount → category → notes → done).<br />
+          2. Split logic (mine / his / shared) + settlement tracking.<br />
+          3. Monthly view with totals and category rollups.<br />
+          4. Simple insights (top categories, trends, "where did the money go?").
+        </strong>
+      </p>
+
+      <h2 class="case-study-subtitle"><strong>Design principles</strong></h2>
+      <p class="heyjoe_paragraph mb-50">
+        <strong>
+          - Fast by default: reduce typing, smart defaults.<br />
+          - Low shame UX: friendly, lightweight, keeps you moving.<br />
+          - Clarity &gt; complexity: don't turn it into accounting software.
+        </strong>
+      </p>
+
+      <a href="https://debeoapp.lovable.app/auth" target="_blank" rel="noopener noreferrer" class="hj-button"
+        >View Demo</a
+      >
+    </div>
+  </div>
+</BaseLayout>

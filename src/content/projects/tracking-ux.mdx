@@ -1,0 +1,84 @@
+---
+title: "Tracking UX"
+subtitle: "Finding Insights Across Major Features"
+description: "How I built a UX metrics process at Vendoo using CSAT and SUS surveys to measure design impact across all released features."
+role: "Product Design Lead"
+company: "Vendoo"
+year: "2024"
+team: "1 Founder, 1 PM"
+tags:
+  - "Product Strategy"
+  - "Design Ops"
+heroImage: "/images/chatgpt-20image-20may-2021-2c-202025-2c-2006_29_59-20pm.avif"
+heroImageAlt: "People talking about insights on the UX metrics survey"
+featured: true
+draft: false
+order: 4
+---
+
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Context</h2>
+  <p class="heyjoe_paragraph">When I started working at Vendoo I quickly realized that they didn't have any way to measure if the design of released features worked or if it needed improvements.</p>
+  <p class="heyjoe_paragraph">This was all me. I lead the effort on having a process to document periodically how users received what we worked on in order to assess if we needed to improve something or move on to a different objective. I knew we had to build a process to know what users thought of all released features and also find out if they were struggling with specific flows.</p>
+  <p class="heyjoe_paragraph">I initially built a process based on two tests: a custom version of a CSAT (customer satisfaction score) and the standard SUS (system usability scale) tests.</p>
+</div>
+
+<div class="two-col">
+  <div class="col-two col-two--tags">
+    <h2 class="case-study-subtitle">So What?</h2>
+    <p class="heyjoe_paragraph">Measuring UX is very tricky, but with these tests results I would have an idea if the feature was working as expected or not. But I didn't want to just have a number (quantitative), I also wanted to have interviews (qualitative) so I added a CTA to all released surveys to get on calls with users that were willing to share their thoughts.</p>
+    <p class="heyjoe_paragraph">With the UX metrics (quantitative and qualitative) backing up all released features we assessed if the feature needed improvements right now (set priority) or if we could move on for now.</p>
+  </div>
+  <div class="col-one">
+    <ImageCaption src="/images/virtual-20conversation-20and-20csat-20score.avif" alt="Virtual Conversation and CSAT Score" />
+  </div>
+</div>
+
+<Highlight text="I noticed that every time we improved or released something, we didn't follow up" />
+
+<div class="single-col">
+  <p class="heyjoe_paragraph">We only followed what the CS team were getting and usage metrics from Mixpanel. I realized there was a big gap from the design side and we had to have direct feedback on everything we released.</p>
+  <p class="heyjoe_paragraph">By showing to the stakeholders the design impact of every released feature, they had another perspective on what should we focus on.</p>
+</div>
+
+<div class="two-col">
+  <div class="col-one">
+    <ImageCaption
+      src="/images/uxmetricsoverview.avif"
+      alt="UX Metrics Overview"
+      caption="We document every single UX Metric test in Notion. Screenshot of some results."
+    />
+  </div>
+  <div class="col-two col-two--tags">
+    <h2 class="case-study-subtitle">Keeping the pulse of the users</h2>
+    <p class="heyjoe_paragraph">I didn't want to only launch the UX metrics surveys after we released the feature and call it a day. Because we know that the product is a living thing and it changes over time. Maybe a feature that was well received at one point, could then underperform a year later... That's why I also built a 1 year follow UX metrics survey for all released features.</p>
+    <p class="heyjoe_paragraph">By doing this, we kept our ears close to the user. This helped us keep iterating, and keep improving and even removing older features to avoid product bloat.</p>
+  </div>
+</div>
+
+<div class="single-col">
+  <ImageCaption
+    src="/images/csatoverview.avif"
+    alt="CSAT Overview"
+    caption="CSAT screenshot of some results."
+  />
+  <ImageCaption
+    src="/images/sustable.avif"
+    alt="SUS Table"
+    caption="SUS screenshot of some results on a table I set up feeding on Refiner's survey results."
+  />
+  <ImageCaption
+    src="/images/susoverview.avif"
+    alt="SUS Overview"
+    caption="SUS screenshot of some results broken down by questions."
+  />
+</div>
+
+<div class="single-col no-margin-bottom">
+  <h2 class="case-study-subtitle">What's next?</h2>
+  <p class="heyjoe_paragraph">The CSAT and the SUS are not enough to assess if the feature is essential to the product. I have a feeling we have a lot of features that aren't being used not only because they are not being discovered but because they are not useful for users.</p>
+  <p class="heyjoe_paragraph">I want to create a third test based on the Sean Ellis score. But not to assess product market fit for a product. Have this on a feature level instead. Kind of weird because I haven't seen it elsewhere but it makes sense for me to have something like this at the feature level.</p>
+</div>

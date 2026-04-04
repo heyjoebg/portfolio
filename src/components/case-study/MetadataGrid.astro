@@ -1,0 +1,50 @@
+---
+interface Props {
+  year: string;
+  role: string;
+  team: string;
+  tags: string[];
+}
+
+const { year, role, team, tags } = Astro.props;
+
+// Group tags into rows of ~2 per row (matching Webflow's tag-container grouping)
+function chunkTags(arr: string[], size: number): string[][] {
+  const chunks: string[][] = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunks.push(arr.slice(i, i + size));
+  }
+  return chunks;
+}
+
+const tagGroups = chunkTags(tags, 2);
+---
+
+<div class="col-two col-two--tags">
+  <div class="list-item">
+    <div class="list-title no-margin">Year</div>
+    <div class="heyjoe_paragraph heyjoe_paragraph--list">{year}</div>
+  </div>
+  <div class="list-item">
+    <div class="list-title no-margin">Role</div>
+    <div class="heyjoe_paragraph heyjoe_paragraph--list">{role}</div>
+  </div>
+  <div class="list-item">
+    <div class="list-title no-margin">Team</div>
+    <div class="heyjoe_paragraph heyjoe_paragraph--list">{team}</div>
+  </div>
+  <div class="list-item list-item--tags">
+    <div class="list-title no-margin">Skills</div>
+    <div class="tags">
+      {
+        tagGroups.map((group) => (
+          <div class="tag-container">
+            {group.map((tag) => (
+              <div class="heyjoe_paragraph heyjoe_paragraph--tag">{tag}</div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

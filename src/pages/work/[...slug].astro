@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import CaseStudyLayout from '../../layouts/CaseStudyLayout.astro';
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const allProjects = await getCollection('projects', (p) => !p.data.draft && p.id !== project.id);
+const otherProjects = allProjects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+
+<CaseStudyLayout
+  title={project.data.title}
+  subtitle={project.data.subtitle}
+  description={project.data.description}
+  year={project.data.year}
+  role={project.data.role}
+  team={project.data.team}
+  tags={project.data.tags}
+  heroImage={project.data.heroImage}
+  heroImageAlt={project.data.heroImageAlt}
+  otherProjects={otherProjects}
+>
+  <Content components={{ Highlight, ImageCaption }} />
+</CaseStudyLayout>

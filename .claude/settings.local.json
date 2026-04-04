@@ -5,7 +5,13 @@
       "Bash(git:*)",
       "Bash(npm create:*)",
       "Bash(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh)",
-      "Bash(bash)"
+      "Bash(bash)",
+      "Bash(cp reference/images/heyjoe-logo-201.svg public/images/)",
+      "Bash(cp reference/images/plus-icon.svg public/images/)",
+      "Bash(cp reference/images/dots-206px.svg public/images/)",
+      "Bash(cp reference/images/favicon.png public/images/)",
+      "Bash(cp reference/images/app-icon.png public/images/)",
+      "Bash(node:*)"
     ]
   }
 }

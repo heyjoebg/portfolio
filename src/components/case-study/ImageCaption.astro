@@ -1,0 +1,18 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { src, alt, caption, loading = 'lazy' } = Astro.props;
+---
+
+<img
+  src={src}
+  alt={alt}
+  loading={loading}
+  class={`portfolio-img img-internal${caption ? ' img-internal-with-caption' : ''}`}
+/>
+{caption && <p class="heyjoe_paragraph caption">{caption}</p>}

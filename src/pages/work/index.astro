@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CaseStudyCard from '../../components/ui/CaseStudyCard.astro';
+
+const allProjects = await getCollection('projects', ({ data }) => !data.draft);
+const projects = allProjects.sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
+---
+
+<BaseLayout title="Work">
+  <div class="main-title">
+    <h1 class="main-heading">Selected Case Studies</h1>
+  </div>
+  <div class="main-container">
+    <div class="case-studies-grid">
+      {projects.map((p) => <CaseStudyCard title={p.data.title} subtitle={p.data.subtitle} slug={p.id} />)}
+    </div>
+  </div>
+</BaseLayout>

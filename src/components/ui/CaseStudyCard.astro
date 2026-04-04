@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  slug: string;
+}
+
+const { title, subtitle, slug } = Astro.props;
+---
+
+<div class="container container__case-study">
+  <h2 class="main-heading">{title}</h2>
+  <p class="heyjoe_paragraph">{subtitle}</p>
+  <a href={`/work/${slug}`} class="hj-button btn-more">
+    <img src="/images/plus-icon.svg" loading="lazy" alt="more" />
+  </a>
+</div>

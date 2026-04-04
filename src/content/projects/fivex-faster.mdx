@@ -1,0 +1,88 @@
+---
+title: "5x faster"
+subtitle: "Revolutionizing Item Creation to Deliver Value Sooner"
+description: "How I designed Vendoo's mobile app to reduce item creation time by 5x, cutting churn among new mobile users."
+role: "Product Design Lead"
+company: "Vendoo"
+year: "2022"
+team: "1 PM, 1 Tech Lead, 3 Devs"
+tags:
+  - "Product Strategy"
+  - "User Research"
+  - "Ideation"
+  - "Mobile UI Design & Prototyping"
+  - "Design Iteration"
+  - "Cross-Functional Collab"
+heroImage: "/images/mobileapp.avif"
+heroImageAlt: "Woman cross-listing on her phone"
+featured: true
+draft: false
+order: 2
+---
+
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Context</h2>
+  <p class="heyjoe_paragraph">One of my biggest initial challenges in Vendoo was to design the mobile app. We were still a small team moving fast, and we knew that a lot of users accessed the product on their phones.</p>
+</div>
+
+<div class="two-col">
+  <div class="col-two col-two--tags">
+    <h2 class="case-study-subtitle">So What?</h2>
+    <p class="heyjoe_paragraph">The mobile web was built as an afterthought. This meant it kind of worked, but it didn't support all the features as desktop and the whole experience wasn't tailored to a mobile user.</p>
+    <p class="heyjoe_paragraph">We had a high churn rate on mobile because users felt frustrated with the whole experience. We didn't let them know what they could do or not there, and the whole thing was very confusing.</p>
+  </div>
+  <div class="col-one">
+    <ImageCaption src="/images/frustrated-20mobile-20user.avif" alt="Frustrated Mobile User" />
+  </div>
+</div>
+
+<Highlight text="Why were new users churning on mobile? What were they expecting to do there?" />
+
+<div class="single-col">
+  <p class="heyjoe_paragraph">We started looking at the metrics and session recordings. The answer was pretty clear. On mobile you can't install the Chrome extension, and we need that to be able to connect to most of the marketplaces. New users couldn't connect to marketplaces, so they basically couldn't do anything. No wonder they left.</p>
+  <p class="heyjoe_paragraph">So we can now answer these: was it feasible to try to replicate the desktop experience on the mobile web? No. Should we just block users and guide them to the desktop? Maybe, but we would lose a few of them in the process. What should we do?</p>
+  <p class="heyjoe_paragraph">We knew users either needed to import or create items. We also knew the mobile web was very limited. If users created items, they tended to stick around more. It was decided: let's build an app to initially tackle these use cases.</p>
+</div>
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Patching up the leaky bucket</h2>
+  <p class="heyjoe_paragraph">Research, design, test, iterate design, test, build, test, iterate, launch, research and iterate. Rinse and repeat. The mobile app was designed and built on record time. We had a beta version in 3 months. Not bad for a small team. We moved fast because we knew we were losing new users on a daily basis.</p>
+  <p class="heyjoe_paragraph">If people signed up using the mobile web and needed to import, we would allow them to import from API based marketplaces. If the marketplace relied on the Chrome extension, we pointed them to the desktop. We knew this wasn't ideal, but it was a good start.</p>
+  <ImageCaption
+    src="/images/mobile-20app-20wireframes.avif"
+    alt="mobile app wireframes"
+    caption="Screenshot of a section of the mobile app wireframes and scenarios."
+  />
+  <ImageCaption
+    src="/images/mobile-20app-20wireframes-202.avif"
+    alt="mobile app wireframes 2"
+    caption="Screenshot of a section of the mobile app wireframes and scenarios."
+  />
+</div>
+
+<Highlight text="we gave users enough tailwind to go to the desktop and pick up where they left off" />
+
+<div class="single-col no-margin-bottom">
+  <ImageCaption
+    src="/images/key-20action_-20listing.avif"
+    alt="Key action Listing on mobile"
+    caption="2024 mobile app metrics. Exported from Mixpanel. Mobile item creation was now 5x faster but we still have ways to go on incentivizing users to actually create them."
+  />
+  <p class="heyjoe_paragraph">If they needed to create items, we allowed them to do so but also pointed them to download the app, given that the experience would be way better there.</p>
+  <p class="heyjoe_paragraph">Within the app, users could now create drafts and take pictures of items with 5x speed. Before, they had to take pics from their phone, transfer them to a cloud service, go to the desktop, download them and continue from there. An experienced user would take around 5 minutes to do this. Now it took less than a minute.</p>
+  <p class="heyjoe_paragraph">By speeding up the item creation process on mobile, we gave users enough tailwind to go to the desktop and pick up where they left off, effectively reducing churn.</p>
+  <ImageCaption
+    src="/images/mobile-20app-20screenshots.avif"
+    alt="Mobile App Screenshots"
+    caption="Various mobile app screenshots."
+  />
+  <ImageCaption
+    src="/images/mobile-20app-20screenshots-202.avif"
+    alt="Mobile App Screenshots 2"
+    caption="Various mobile app screenshots."
+  />
+  <p class="heyjoe_paragraph">By no means mobile has been solved, but it is trending in the right direction. Maybe the next challenge is to support import 100% on mobile web and app. The bucket is still leaking, but it's not a waterfall like before.</p>
+</div>

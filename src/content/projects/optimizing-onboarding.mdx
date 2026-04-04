@@ -1,0 +1,128 @@
+---
+title: "Optimizing Onboarding"
+subtitle: "How We Achieved a 2X Conversion Boost"
+description: "How I led the redesign of Vendoo's onboarding flow to achieve a 2X conversion rate increase by reducing cognitive load on the marketplace connections screen."
+role: "Product Design Lead"
+company: "Vendoo"
+year: "2024"
+team: "1 PM, 1 Tech Lead, 2 Devs"
+tags:
+  - "Product Strategy"
+  - "User Research"
+  - "Ideation"
+  - "Prototyping"
+  - "UI Design"
+  - "Cross-Functional Collab"
+  - "Design Iteration"
+heroImage: "/images/chatgpt-20image-20may-2021-2c-202025-2c-2005_01_43-20pm.avif"
+heroImageAlt: "A woman using her laptop to cross-list items"
+featured: true
+draft: false
+order: 1
+---
+
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Context</h2>
+  <p class="heyjoe_paragraph">Vendoo is the leading cross-listing platform for resellers in the US. By allowing to connect multiple marketplaces (eBay, Etsy, Poshmark...) into one source, resellers can manage a single inventory and cross-list their items way faster and easier than by having to deal with multiple accounts and inventories on each marketplace.</p>
+</div>
+
+<Highlight text="Why was our onboarding conversion rate trending down?" />
+
+<div class="single-col">
+  <p class="heyjoe_paragraph">So we needed to know why the onboarding conversion rate was bad and trending down. But first, a quick explanation on what a successful Vendoo onboarding means. Otherwise you wouldn't really know what the hell I'm talking about.</p>
+  <p class="heyjoe_paragraph">A successful onboarding means a user signs up and cross lists items. But there are a couple of set up steps between. Where were we failing? Was it on one specific step, was it on all of them?</p>
+  <ul role="list" class="list">
+    <li class="case-study-list-item">Account creation (Setup)</li>
+    <li class="case-study-list-item">Chrome extension installation (Setup)</li>
+    <li class="case-study-list-item">Marketplace(s) connection (Setup)</li>
+    <li class="case-study-list-item">Inventory import (Set up)</li>
+    <li class="case-study-list-item">Cross-list (Aha moment)</li>
+  </ul>
+  <ImageCaption src="/images/onboarding.avif" alt="A guy successfully onboarding into the product" />
+</div>
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Dig, dig, dig</h2>
+  <p class="heyjoe_paragraph">It was time for what I call: "Archeology" work. It's that moment when you roll up your sleeves, put on the Indiana Jones hat and start digging. You know where to look, but you don't know what you'll find. Hopefully, you'll end up with something valuable in your hands.</p>
+  <p class="heyjoe_paragraph">We set up a metrics board to look at the drop off rate on each step. You could clearly see a drop in the marketplace connections screen. So we had the what, now we needed the why.</p>
+  <ImageCaption
+    src="/images/growth-20funnel-20-3-20months-20-20not-20in-20onboarding-20v3.avif"
+    alt="Growth Funnel (3 months) - not in onboarding v3"
+    caption="Old onboarding funnel metrics. Exported from Mixpanel. Removed sensitive info."
+  />
+</div>
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Our AHA Moment</h2>
+  <p class="heyjoe_paragraph">I started by looking at recorded sessions from users that were onboarding focusing on that step. I quickly found out that they were struggling with all the information being shown. We showed the extension installation status, all the marketplaces we support (10), plus each marketplace status and error messages. They didn't know what to do with all of that.</p>
+  <ImageCaption
+    src="/images/marketplaceconnections.avif"
+    alt="Previous marketplace connection screen"
+    caption="Screenshot from Vendoo's old set up screen during onboarding. What's the main action here? Why am I being screamed at if I just signed up and haven't actually done anything?"
+  />
+  <p class="heyjoe_paragraph">I did a round of user interviews to see if what I was seeing was actually true. I wanted to have a bit more confidence on the problem we wanted to tackle. After the fifth one, I knew we had enough to move forward.</p>
+</div>
+
+<Highlight text="Too much stuff going on at the same time" />
+
+<div class="single-col">
+  <p class="heyjoe_paragraph">We forgot one of the building stones of a good experience. The good ol' and trusty KISS principle. I mean, if it works to build aircrafts since the 60's, it should be good enough to apply here. KISS means "Keep it simple, stupid".</p>
+  <p class="heyjoe_paragraph">So based on that, you know what I'm thinking here, right? Exactly, reduce cognitive load to maximize usability. One of the pillars of good UX, duh!</p>
+  <p class="heyjoe_paragraph">We decided to break apart the marketplace connections screen and do not show everything at once, even if it seemed like useful info.</p>
+  <p class="heyjoe_paragraph">Our hypothesis was that by guiding the user and showing just enough info, they would be able to successfully connect whatever marketplace they wanted and keep on moving.</p>
+  <ImageCaption
+    src="/images/userflows.avif"
+    alt="user flows"
+    caption="User flows to have a shared understanding of all possible scenarios."
+  />
+  <ImageCaption
+    src="/images/onboarding-20wireframes-20detail.avif"
+    alt="onboarding wireframes detail"
+    caption="Wireframes of initial steps. We wanted to keep velocity and momentum so it was very low def."
+  />
+</div>
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Show me the money!</h2>
+  <p class="heyjoe_paragraph">Remember? The Jerry Maguire movie? No? Anyway, we did focus on numbers but nobody said "show me the money" lol. All that mattered was to see the onboarding conversion rate go up. After tweaking the steps and the amount of info we showed during the marketplace connections screen, and doing another round of user testing, we finally achieved that. Hypothesis validated.</p>
+  <p class="heyjoe_paragraph">So we increased the onboarding conversion rate by 2X. Sweet! I would've loved to keep tweaking and improving onboarding, but hey, baby steps.</p>
+  <ImageCaption
+    src="/images/growth-20funnel-20-3-20months-20-20onboarding-20v3.avif"
+    alt="Growth Funnel (3 months) - onboarding v3"
+    caption="Comparison between old onboarding and new version funnel metrics. Exported from Mixpanel. Removed sensitive info."
+  />
+  <ImageCaption
+    src="/images/growth-20funnel-20-3-20months-20-20listing-20rate.avif"
+    alt="Growth Funnel (3 months) - listing rate"
+    caption="Comparison between old onboarding and new version conversion percentage. Exported from Mixpanel. Removed sensitive info."
+  />
+  <ImageCaption
+    src="/images/step-201_-20chrome-20extension.avif"
+    alt="step 1: Chrome Extension"
+    caption="STEP 1: Install Chrome extension"
+  />
+  <ImageCaption
+    src="/images/step-202_-20marketplaces-20-not-20connected-.avif"
+    alt="step 2: marketplaces (not connected)"
+    caption="STEP 2: Connect marketplaces"
+  />
+  <ImageCaption
+    src="/images/step-202_-20marketplaces-20-connected-.avif"
+    alt="step 2: marketplaces (connected)"
+    caption="STEP 2.1: Connected marketplaces"
+  />
+  <ImageCaption
+    src="/images/3choose-20how-20to-20use-20vendoo-20-not-20connected-.avif"
+    alt="Step 3: Choose a way to start cross-listing"
+    caption="STEP 3: Choose a way to start cross-listing"
+  />
+</div>
+
+<Highlight text="can't stop, won't stop" />
+
+<div class="single-col no-margin-bottom">
+  <p class="heyjoe_paragraph">How can we keep improving the onboarding? Noticed the "Item creation step"? What if we tailor the onboarding depending on the use case? Users that want to import vs. users that want to create items from scratch. Sounds promising, right?</p>
+</div>

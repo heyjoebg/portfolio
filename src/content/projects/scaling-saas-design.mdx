@@ -1,0 +1,74 @@
+---
+title: "Scaling Saas Design"
+subtitle: "How a Unified System Boosted Consistency and Speed"
+description: "How I built Vendoo's design system from scratch using Atomic Design, covering 80% of web components and 100% of mobile, enabling consistent and faster design across the team."
+role: "Product Design Lead"
+company: "Vendoo"
+year: "2022 - Ongoing"
+team: "1 Founder, 1 Growth Marketing Designer"
+tags:
+  - "Design System Research"
+  - "Ideation"
+  - "Design System Creation"
+  - "UI Design"
+  - "Design Iteration"
+heroImage: "/images/designsystem.avif"
+heroImageAlt: "Designer using the design system"
+featured: true
+draft: false
+order: 3
+---
+
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+<div class="single-col">
+  <h2 class="case-study-subtitle">Context</h2>
+  <p class="heyjoe_paragraph">When I got to Vendoo, design was led by one of the founders. They only had one UX designer following his lead so they thought they didn't need to have a design system. The UX designer left and once I got there I knew we had to build one because not having one would come back to hunt us sooner or later.</p>
+  <p class="heyjoe_paragraph">Even though it was scattered on multiple Figma files and there was no logic or order in place, the founder had built 20% of it. I built 80% of the web design system following his initial efforts and 100% of the mobile design system.</p>
+</div>
+
+<div class="two-col">
+  <div class="col-two col-two--tags">
+    <h2 class="case-study-subtitle">So What?</h2>
+    <p class="heyjoe_paragraph">Without a design system, when there was a new feature to work on, the design team had to look for components on multiple Figma files if they even existed. A lot of times they had to build it from scratch. This took a lot of time and effort, and also added inconsistency to the design and to the final outcome.</p>
+    <p class="heyjoe_paragraph">We knew we had the mobile app in the roadmap, so we had to make sure to have something built before dealing with that. Otherwise it would have been a really tough ask to maintain the same design language and patterns across multiple platforms and features.</p>
+  </div>
+  <div class="col-one">
+    <ImageCaption src="/images/collaboration-20through-20design-20systems.avif" alt="Collaboration Through Design Systems" />
+  </div>
+</div>
+
+<Highlight text="If you build it, they will come" />
+
+<div class="single-col">
+  <p class="heyjoe_paragraph">Some components were scattered around on different Figma files and there was the beginning of a Design System in place. I basically reversed engineered what we had, and built scalable components based on the <a href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener noreferrer" class="a-link">"Atomic Design" framework.</a></p>
+  <p class="heyjoe_paragraph">This allowed us to start from the smallest part possible (atom) and finish all the way up with "Organisms", "Templates" and "Pages". This allowed to design in a modular way, reusing and mixing up different atoms, molecules and organisms to build different components for the ever coming features.</p>
+  <p class="heyjoe_paragraph">Once built, the new design team members got a head start on the way we do design in Vendoo, increasing efficiency when tackling new tasks. Plus, the engineering team now had consistent documentation and also clear design logic and consistency to rely on.</p>
+  <ImageCaption
+    src="/images/dsdropdowns.avif"
+    alt="DS Dropdowns"
+    caption="Screenshot of Vendoo's Design System built by me."
+  />
+  <ImageCaption
+    src="/images/dscards.avif"
+    alt="DS Cards"
+    caption="Screenshot of Vendoo's Design System built by me."
+  />
+  <ImageCaption
+    src="/images/dsatoms.avif"
+    alt="DS Atoms"
+    caption="Screenshot of Vendoo's Design System built by me."
+  />
+  <ImageCaption
+    src="/images/dsancillary.avif"
+    alt="DS Ancillary"
+    caption="Screenshot of Vendoo's Design System built by me."
+  />
+</div>
+
+<div class="single-col no-margin-bottom">
+  <h2 class="case-study-subtitle">Keep it up!</h2>
+  <p class="heyjoe_paragraph">This was hard to build, and I know it's not perfect, it will never will be, but it's even harder to maintain and to keep it updated without having someone working on this 100% of the time.</p>
+  <p class="heyjoe_paragraph">I'm still struggling with this step and it's an ongoing effort and discussion on how to improve it but for now, every time a designer builds something new, they will communicate it to the design team and add or update the impacted components.</p>
+</div>

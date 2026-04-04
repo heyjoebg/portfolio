@@ -1,0 +1,49 @@
+---
+const pathname = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') return pathname === '/';
+  return pathname.startsWith(href);
+}
+
+const CV_URL =
+  'https://cdn.prod.website-files.com/6000d057beb7e916ba7c211a/69a096bddc4602a4cd115779_Jonathan_Beltran_Product_Designer_CV_2026.pdf';
+---
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+<div class="main-nav" role="banner">
+  <div class="main-nav__container">
+    <a href="/" class={`main-nav-logo${isActive('/') ? ' w--current' : ''}`} aria-label="HeyJoe home">
+      <img src="/images/heyjoe-logo-201.svg" loading="lazy" alt="hey joe logo" />
+    </a>
+    <nav class="main-nav-menu" role="navigation">
+      <a href="/about" class={`main-nav-menu__link${isActive('/about') ? ' w--current' : ''}`}>About Me</a>
+      <a href="/work" class={`main-nav-menu__link${isActive('/work') ? ' w--current' : ''}`}>Work</a>
+      <a
+        href="/experiments"
+        class={`main-nav-menu__link${isActive('/experiments') ? ' w--current' : ''}`}>AI Experiments</a
+      >
+      <a href={CV_URL} target="_blank" rel="noopener noreferrer" class="main-nav-menu__link">CV</a>
+      <a
+        href="https://www.linkedin.com/in/heyjoe/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="main-nav-menu__link">LinkedIn</a
+      >
+    </nav>
+    <div class="menu-btn-wrapper">
+      <label for="nav-toggle" class="menu-button" aria-label="Toggle navigation">
+        <span>&#9776;</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  @media (max-width: 767px) {
+    .main-nav__container {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+</style>
