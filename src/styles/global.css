@@ -237,14 +237,13 @@ body {
 }
 
 .menu-button {
-  border: 1px solid var(--purplehaze);
-  border-radius: 1px;
   padding: 5px 10px;
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--purplehaze);
-  background: white;
+  background: transparent;
   line-height: 1;
+  border: none;
 }
 
 /* ============================================================
@@ -585,9 +584,24 @@ body {
     border-bottom: none;
   }
 
+  .main-nav__container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .main-nav-logo {
+    order: 1;
+  }
+
   .menu-btn-wrapper {
+    order: 2;
     display: block;
     width: auto;
+    margin-left: auto;
+  }
+
+  .main-nav-menu {
+    order: 3;
   }
 
   .container.container__home,
