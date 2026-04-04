@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — extracted from your Webflow CSS */
+  --color-base-gray: #f0f0f0;
+  --color-dark: #333333;
+  --color-purplehaze: #5b38aa;
+  --color-purplehaze-hover: #8e6cdb;
+  --color-purplehaze-light: #f4e9ff;
+  --color-bg-dark: #e2e2e2;
+  --color-body-text: #666666;
+  --color-caption: #7c7c7c;
+  --color-metadata-bg: #f7f7f7;
+
+  /* Fonts */
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-body: "Open Sans", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+}
