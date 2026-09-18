@@ -1,0 +1,83 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import CaseStudyCard from '../components/ui/CaseStudyCard.astro';
+
+interface Props {
+  experiment: CollectionEntry<'experiments'>;
+  otherExperiments: CollectionEntry<'experiments'>[];
+}
+
+const { experiment, otherExperiments } = Astro.props;
+const { title, tagline, description, year, role, skills, tools, demoUrl } = experiment.data;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container container-case-study">
+    <div class="single-col mb-50">
+      <h1 class="huge-heading"><strong>{title}: {tagline}</strong></h1>
+
+      <div class="col-two col-two--tags">
+        <div class="list-item">
+          <div class="list-title no-margin">Year</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">{year}</div>
+        </div>
+        <div class="list-item">
+          <div class="list-title no-margin">Role</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">{role}</div>
+        </div>
+        <div class="list-item list-item--tags">
+          <div class="list-title no-margin">Skills</div>
+          <div class="tags">
+            <div class="tag-container">
+              {skills.map((skill) => <div class="heyjoe_paragraph heyjoe_paragraph--tag">{skill}</div>)}
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-title no-margin">Tools</div>
+          <div class="heyjoe_paragraph heyjoe_paragraph--list">{tools.join(', ')}.</div>
+        </div>
+        {
+          demoUrl && (
+            <div class="list-item">
+              <div class="list-title no-margin">Link</div>
+              <a href={demoUrl} target="_blank" rel="noopener noreferrer" class="link">
+                Check out the demo here
+              </a>
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <slot />
+
+    {
+      demoUrl && (
+        <div class="single-col">
+          <a href={demoUrl} target="_blank" rel="noopener noreferrer" class="hj-button">
+            View Demo
+          </a>
+        </div>
+      )
+    }
+  </div>
+
+  {
+    otherExperiments.length > 0 && (
+      <>
+        <div class="main-title main-title--other">
+          <h1 class="main-heading">other experiments</h1>
+        </div>
+        <div class="main-container">
+          <div class="case-studies-grid">
+            {otherExperiments.map((e) => (
+              <CaseStudyCard title={e.data.title} subtitle={e.data.tagline} slug={e.id} href={`/experiments/${e.id}`} />
+            ))}
+          </div>
+        </div>
+      </>
+    )
+  }
+</BaseLayout>

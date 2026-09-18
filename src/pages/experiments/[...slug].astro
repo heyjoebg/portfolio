@@ -1,0 +1,28 @@
+---
+import { getCollection, render } from 'astro:content';
+import ExperimentLayout from '../../layouts/ExperimentLayout.astro';
+import Highlight from '../../components/case-study/Highlight.astro';
+import ImageCaption from '../../components/case-study/ImageCaption.astro';
+
+// Drafts are built in dev so they can be previewed, never in production.
+const isVisible = (e: { data: { draft: boolean } }) => import.meta.env.DEV || !e.data.draft;
+
+export async function getStaticPaths() {
+  const experiments = await getCollection('experiments', (e) => import.meta.env.DEV || !e.data.draft);
+  return experiments.map((experiment) => ({
+    params: { slug: experiment.id },
+    props: { experiment },
+  }));
+}
+
+const { experiment } = Astro.props;
+const { Content } = await render(experiment);
+
+const otherExperiments = (await getCollection('experiments', (e) => isVisible(e) && e.id !== experiment.id)).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
+---
+
+<ExperimentLayout experiment={experiment} otherExperiments={otherExperiments}>
+  <Content components={{ Highlight, ImageCaption }} />
+</ExperimentLayout>

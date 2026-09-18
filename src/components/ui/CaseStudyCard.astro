@@ -3,15 +3,16 @@ interface Props {
   title: string;
   subtitle: string;
   slug: string;
+  href?: string;
 }
 
-const { title, subtitle, slug } = Astro.props;
+const { title, subtitle, slug, href = `/work/${slug}` } = Astro.props;
 ---
 
 <div class="container container__case-study">
   <h2 class="main-heading">{title}</h2>
   <p class="heyjoe_paragraph">{subtitle}</p>
-  <a href={`/work/${slug}`} class="hj-button btn-more">
+  <a href={href} class="hj-button btn-more">
     <img src="/images/plus-icon.svg" loading="lazy" alt="more" />
   </a>
 </div>

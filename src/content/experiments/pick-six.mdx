@@ -1,0 +1,82 @@
+---
+title: "Pick Six"
+tagline: "An NFL prediction game that feels like 1992"
+description: "A private NFL prediction game for three friends, built to replace our Kicktipp pool and styled as a 1992 Sega football cartridge."
+role: "Product Builder"
+year: "2026"
+skills:
+  - "Product Strategy"
+  - "Game Design"
+  - "Visual Direction"
+  - "AI Prototyping"
+tools:
+  - "Claude Code"
+  - "Vercel"
+  - "Supabase"
+  - "GitHub Actions"
+demoUrl: "https://pick-six-black.vercel.app/demo"
+draft: false
+order: 1
+---
+
+<Highlight text="Pick Six's goal: replace our Kicktipp pool with a game that feels like ours." />
+
+<div class="single-col mb-50">
+  <h2 class="case-study-subtitle"><strong>Pick Six, a private NFL prediction game</strong></h2>
+  <p class="heyjoe_paragraph mb-50">Every NFL season, two friends and I predict the score of every game. For years we ran it on <strong>Kicktipp</strong>. For the 2026 season I built our own. Pick Six keeps the Kicktipp rules we already knew and puts them inside something that looks like a 1992 Sega football cartridge. It went live on 7 September, before the season opener, and the three of us have picked every game since.</p>
+  <p class="heyjoe_paragraph mb-50">The real game is private, so I built a <strong>public demo</strong> alongside it. My two friends are swapped for invented players, Bill and Tony. Every pick and score is generated, and the season is frozen mid-week 4 so you can see finished, live and open weeks at once. Nothing you tap leaves your browser.</p>
+
+  <h2 class="case-study-subtitle"><strong>Why I built it</strong></h2>
+  <p class="heyjoe_paragraph mb-50">Kicktipp does the job, but using it every week was a chore:<br /><br />- Outdated UI and UX. It looks and feels like a spreadsheet, and it's boring to open.<br />- Saving scores is a pain, especially on a phone, which is where we pick.<br />- It's built for every sport, so nothing about it is made for the NFL.<br />- The free version keeps interrupting you with modals and ads.<br /><br />I wanted a game made for exactly us: three players, one league, a pre-season bonus round, and something we'd actually look forward to opening every week. It was also a chance to see how far a designer can take a real product with AI as the engineering partner.</p>
+
+  <h2 class="case-study-subtitle"><strong>Users</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- Me + two friends.</strong> We're competitive, we're mostly on our phones, and we already know the Kicktipp rules.<br />- Three real people also means three real ways to cheat, forget, or mistype a score, so the product has to handle all three.</p>
+
+  <h2 class="case-study-subtitle"><strong>What success looks like</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- We play the whole season on it, with no fallback to Kicktipp.<br />- Picking a full week of games takes a couple of minutes on a phone.<br />- Scores come in on their own during games, and the table is always right.<br />- It runs by itself all season. No babysitting from me.</strong></p>
+
+  <h2 class="case-study-subtitle"><strong>Constraints</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- A real published web app, not a prototype link. It installs to the home screen like a native app.<br />- Free-tier infrastructure only.<br />- Fair play: each game locks at its own kickoff, and nobody sees anyone else's pick until then.<br />- Live data from public sources (ESPN) for fixtures, betting lines and scores.</strong></p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-50">
+  <div>
+    <ImageCaption src="/images/pick-six-season.png" alt="Pick Six season screen: a grid of 18 week tiles plus a bonus tile, color-coded by played, in play, and open, with yellow flags counting missing picks" caption="Season: every week at a glance, with flags for missing picks." />
+  </div>
+  <div>
+    <ImageCaption src="/images/pick-six-week-open.png" alt="Pick Six week screen with open games, pixel-art team helmets, score inputs, and a row showing which players have picked" caption="Week: pick scores, see who's already picked." />
+  </div>
+  <div>
+    <ImageCaption src="/images/pick-six-quick-play.png" alt="Pick Six Quick Play screen showing one game at a time with a progress bar, the betting line, and Previous, Next and save buttons" caption="Quick Play: one game at a time, thumb-first." />
+  </div>
+  <div>
+    <ImageCaption src="/images/pick-six-ranking.png" alt="Pick Six ranking screen with the season table and a list of weekly winners" caption="Ranking: season table and week winners." />
+  </div>
+</div>
+
+<Highlight text="Visual style → app logic → tech stack. In that order." />
+
+<div class="single-col mb-50">
+  <h2 class="case-study-subtitle"><strong>My approach (how I built it)</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>I set the working order before any code existed, and kept to it:<br />- <em>Visual style first.</em> I built a working prototype with the real 2026 schedule and simulated results. The whole look was judged in the browser, not in Figma.<br />- <em>App logic second.</em> The Week screen's states, Quick Play, the bonus round and the playoffs were all designed and tested in that prototype before there was a backend. That's how we caught a pick being credited to the wrong player, a bug that would have been much harder to find once real data was involved.<br />- <em>Tech stack last.</em> Only then did we pick the stack and ship it.<br />- AI as the engineering partner: I made the product and design calls, Claude Code did most of the building. Explore, propose, then I choose.</strong></p>
+
+  <h2 class="case-study-subtitle"><strong>Core flows</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>1. Season: every week in a grid, color-coded as played, in play or open, with a flag for missing picks.<br />2. Week: enter a score for each game. Each game locks at its own kickoff, then live and final results come in.<br />3. Quick Play: one game at a time, built for filling in a whole week from your phone.<br />4. Bonus round: 13 pre-season calls (division winners, conference finalists, Super Bowl), locked at the opener.<br />5. Ranking: season table, week winners, and an archive of past seasons.</strong></p>
+
+  <h2 class="case-study-subtitle"><strong>Design principles</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- Arcade shell, not arcade mechanics: no XP, combos or power-ups. Nothing in the game layer can change who wins the league.<br />- Football's words over game words: it's a <em>Week</em>, never a "level". <em>High Scores</em> became <em>Ranking</em>.<br />- The smaller, more charming option wins. A full announcer commentary feature became two sampled moments.<br />- 8-bit discipline: no border radius, no gradients, no blurred shadows. Hard offset shadows, and shading done with dithering.<br />- Measure, don't guess. Sprites, music and the announcer voice were compared side by side in small "lab" pages until they looked and sounded right.</strong></p>
+</div>
+
+<Highlight text="Three real players surfaced what simulated data never could." />
+
+<div class="single-col mb-50">
+  <h2 class="case-study-subtitle"><strong>What real use taught me</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- <em>Hide picks until kickoff, per game.</em> In the prototype everyone's picks were visible, which was fine with simulated data. With three real people, a pick you can see before kickoff is a pick you can copy. Sunday's 1pm games open up at 1pm, and the 4pm games stay hidden until 4pm.<br />- <em>But show that someone has picked.</em> A line sits where their score will appear, so you know who you're still waiting on without seeing what they chose.<br />- <em>The rules changed mid-season.</em> After week 1 we moved from flat 4/3/0 scoring to 4/3/2/0, so picking the right winner earns something. The opener was re-scored the same day.<br />- <em>Reminders became a calendar, not push notifications.</em> Web push needs a permission prompt and doesn't work everywhere on iPhone. You subscribe to a calendar feed instead, and it reminds you before the first kickoff and before the Sunday games.</strong></p>
+
+  <h2 class="case-study-subtitle"><strong>What I cut</strong></h2>
+  <p class="heyjoe_paragraph mb-50"><strong>- "CPU Pick", which auto-filled picks from the betting line. Not needed, and it undercut the point of the game.<br />- 3-letter arcade initials and color-coded player dots. Names alone read better.<br />- CRT scanlines, a perspective stadium, and synthesized crowd noise. Each one looked or sounded worse than the simpler version.</strong></p>
+
+  <div class="max-w-sm">
+    <ImageCaption src="/images/pick-six-week-results.png" alt="Pick Six week screen after games have finished, showing the real score, each player's pick, and points earned" caption="After kickoff: real scores, everyone's picks, and points earned." />
+  </div>
+</div>

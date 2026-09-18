@@ -32,6 +32,7 @@ const experiments = defineCollection({
     tools: z.array(z.string()),
     demoUrl: z.string().optional(),
     draft: z.boolean().default(false),
+    order: z.number().optional(),
   }),
 });
 
